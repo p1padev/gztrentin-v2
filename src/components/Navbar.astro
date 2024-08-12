@@ -1,0 +1,48 @@
+---
+import logo from '../assets/logo-gzt.svg';
+import ArrowIcon from './ArrowIcon.astro';
+---
+
+<div class="navbar bg-base-100 shadow-md">
+  <div class="navbar-start w-full lg:w-1/2">
+    <div class="dropdown absolute">
+      <button class="btn btn-ghost lg:hidden !outline-primary">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h8m-8 6h16"></path>
+        </svg>
+      </button>
+      <ul
+        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+      >
+        <li><a>Item 1</a></li>
+        <li><a>Item 2</a></li>
+      </ul>
+    </div>
+    <img
+      class="mx-auto w-[60px] h-[60px] lg:w-[80px] lg:h-[80px]"
+      src={logo.src}
+      width="60"
+      height="60"
+      alt=""
+    />
+  </div>
+  <div class="navbar-center hidden lg:flex">
+    <ul class="menu menu-horizontal px-1">
+      <li><a>Item 1</a></li>
+      <li><a>Item 2</a></li>
+    </ul>
+  </div>
+  <div class="navbar-end hidden lg:inline-flex">
+    <a href="/" class="btn !outline-primary">Entre em contato <ArrowIcon /></a>
+  </div>
+</div>

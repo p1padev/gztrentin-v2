@@ -1,0 +1,41 @@
+---
+import ArrowIcon from '../components/ArrowIcon.astro';
+import Navbar from '../components/Navbar.astro';
+---
+
+<header class="flex flex-col">
+  <Navbar />
+  <h1
+    class="text-center text-black text-[1.6rem] font-serif font-bold sm:text-4xl/[1.5] md:text-5xl/[1.5] mx-auto py-12 max-w-[26ch] px-1"
+  >
+    Uma boa defesa pode mudar o <span class="p-1 bg-base-300">rumo</span>
+    da sua <span class="cursor">vida</span>
+  </h1>
+  <div class="bg-base-200 text-center py-8 px-4">
+    <p class="font-medium text-md">
+      A partir de uma análise
+      <span class="font-bold">criteriosa </span> do seu caso, posso te ajudar com
+      o meu trabalho.
+    </p>
+  </div>
+  <a class="btn btn-primary mt-6 lg:hidden w-fit mx-auto">
+    Entre em contato <ArrowIcon />
+  </a>
+</header>
+
+<style>
+  .cursor {
+    border-right: 2px solid black;
+    animation: blink 1s infinite step-end;
+    padding-right: 2px;
+  }
+  @keyframes blink {
+    0%,
+    100% {
+      border-color: transparent;
+    }
+    50% {
+      border-color: #000;
+    }
+  }
+</style>
