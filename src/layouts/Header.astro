@@ -1,41 +1,23 @@
 ---
 import ArrowIcon from '../components/ArrowIcon.astro';
 import Navbar from '../components/Navbar.astro';
+import Typewriter from '../components/Typewriter.astro';
 ---
 
 <header class="flex flex-col">
   <Navbar />
-  <h1
-    class="text-center text-black text-[1.6rem] font-serif font-bold sm:text-4xl/[1.5] md:text-5xl/[1.5] mx-auto py-12 max-w-[26ch] px-1"
-  >
-    Uma boa defesa pode mudar o <span class="p-1 bg-base-300">rumo</span>
-    da sua <span class="cursor">vida</span>
-  </h1>
-  <div class="bg-base-200 text-center py-8 px-4">
-    <p class="font-medium text-md">
-      A partir de uma análise
-      <span class="font-bold">criteriosa </span> do seu caso, posso te ajudar com
-      o meu trabalho.
-    </p>
+  <div class="pt-36 pb-10 px-1 flex flex-col justify-center gap-10">
+    <h1 class="text-center text-primary text-[1.6rem] leading-normal font-serif font-bold sm:text-4xl/normal md:text-5xl/normal mx-auto max-w-[24ch]">Uma boa defesa pode 
+      <span class="text-red-500">mudar</span> o rumo da sua vida
+    </h1>
+    <div class="mx-auto p-1 bg-base-200 min-w-48 text-center opacity-50 -z-10">
+      <Typewriter/>
+    </div>
   </div>
-  <a class="btn btn-primary mt-6 lg:hidden w-fit mx-auto">
-    Entre em contato <ArrowIcon />
-  </a>
+  <div class="bg-gradient-to-br from-base-100 via-base-200 to-base-300 text-center py-8 px-4">
+    <p class="font-medium text-lg md:text-xl">Com uma análise
+      <span class="font-bold">detalhada</span> do seu caso, meu objetivo como advogado criminal é elaborar a melhor estratégia para superar essa situação.</p>
+    <a class="btn btn-primary mt-6 lg:hidden w-fit mx-auto">Entre em contato <ArrowIcon />
+    </a>
+  </div>
 </header>
-
-<style>
-  .cursor {
-    border-right: 2px solid black;
-    animation: blink 1s infinite step-end;
-    padding-right: 2px;
-  }
-  @keyframes blink {
-    0%,
-    100% {
-      border-color: transparent;
-    }
-    50% {
-      border-color: #000;
-    }
-  }
-</style>
