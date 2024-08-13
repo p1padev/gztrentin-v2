@@ -1,10 +1,12 @@
 ---
+import { Image } from 'astro:assets';
 import logo from '../assets/logo-gzt.svg';
 import ArrowIcon from './ArrowIcon.astro';
 ---
 
-<div class="navbar bg-base-100 shadow-md">
-  <div class="navbar-start w-full lg:w-1/2">
+<div class="bg-base-100 shadow-md fixed md:static w-full">
+  <div class="navbar lg:container">
+  <div class="navbar-start basis-full lg:basis-1/2 flex-shrink">
     <div class="dropdown absolute">
       <button class="btn btn-ghost lg:hidden !outline-primary">
         <svg
@@ -28,9 +30,9 @@ import ArrowIcon from './ArrowIcon.astro';
         <li><a>Item 2</a></li>
       </ul>
     </div>
-    <img
-      class="mx-auto w-[60px] h-[60px] lg:w-[80px] lg:h-[80px]"
-      src={logo.src}
+    <Image
+      class="mx-auto w-[60px] h-[60px] lg:w-[80px] lg:h-[80px] lg:mr-auto lg:ml-0"
+      src={logo}
       width="60"
       height="60"
       alt=""
@@ -42,7 +44,8 @@ import ArrowIcon from './ArrowIcon.astro';
       <li><a>Item 2</a></li>
     </ul>
   </div>
-  <div class="navbar-end hidden lg:inline-flex">
+  <div class="navbar-end w-auto basis-1/2 hidden lg:inline-flex">
     <a href="/" class="btn !outline-primary">Entre em contato <ArrowIcon /></a>
   </div>
+</div>
 </div>
