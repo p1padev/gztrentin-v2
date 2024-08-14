@@ -1,0 +1,17 @@
+---
+interface Props {
+  title: string,
+  sectionStyles?: string,
+  titleStyles?: string
+}
+const {title, sectionStyles, titleStyles} = Astro.props as Props;
+---
+
+<section class=`${sectionStyles} py-8 px-4`>
+  <div class="container">
+    <div class="w-fit border-b-2 border-solid border-white py-4 pr-3 mb-4">
+      <h2 class='text-primary-content text-xl font-semibold lg:text-3xl'>{title}</h2>
+    </div>
+    <slot/>
+  </div>
+</section>
