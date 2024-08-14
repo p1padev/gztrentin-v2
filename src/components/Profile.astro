@@ -1,0 +1,47 @@
+---
+import Section from "../layouts/Section.astro";
+import perfilImg from '../assets/perfil-fallback.jpg'
+import escritImg from '../assets/temp-escritório.jpg'
+import { Picture } from "astro:assets";
+---
+
+<Section title="O escritório" sectionStyles="bg-gradient-to-b from-red-800 to-red-900">
+  <div class="flex w-full flex-col items-center justify-center gap-4 md:flex-row md:gap-40">
+    <p class="text-white lg:text-xl"><span class="font-semibold">Gustavo Trentin - Advocacia Criminal</span> é um escritório especializado em Direito e Processo Penal, com atuação completa em todas as fases do processo e do inquérito policial.</p>
+    <div class="w-fit lg:ml-auto">
+      <Picture src={escritImg} formats={['webp']} alt="Foto de Gustavo em sessão de júri. Ele é loiro, branco, usa um terno preto e uma toga preta por cima." pictureAttributes={{class: "escrit-image"}}/>
+    </div>
+  </div>
+</Section>
+<div class="bg-gradient-to-b from-red-900 to-red-950 text-white py-4 shadow-inner">
+  <div class="py-4 bg-base-300">
+    <div class="w-fit mx-auto">
+      <Picture src={perfilImg} formats={['webp']} alt="Foto de Gustavo em sessão de júri. Ele é loiro, branco, usa um terno preto e uma toga preta por cima." pictureAttributes={{class: "perfil-image"}}/>
+    </div>
+    <p class="font-serif font-semibold text-center bg-base-100 text-primary py-4 px-4 max-w-[23rem] lg:max-w-prose shadow-lg">Gustavo Zanette Trentin é Advogado Criminalista, pós-graduado em Direito Penal e Criminologia pela PUC/RS.
+    </p>
+  </div>
+</div>
+
+<style>
+  .escrit-image img{
+    max-width: 350px;
+    object-fit: cover;
+  }
+
+  .perfil-image img {
+    max-height: 200px;
+    max-width: 340px;
+    object-fit: cover;
+    object-position: center 55%;
+  }
+
+  @media screen and (min-width:768px) {
+    .escrit-image img{
+      max-width: 600px;
+    }
+    .perfil-image img {
+      max-width: 450px;
+    }
+  }
+</style>
