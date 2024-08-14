@@ -1,0 +1,13 @@
+<p aria-hidden="true" id="typewriter" class="!font-serif !font-semibold"></p>
+
+<script>
+  //@ts-ignore
+  import Typewriter from 'typewriter-effect/dist/core.js'
+
+  const p = document.querySelector('#typewriter')
+  const typewriter = new Typewriter(p, {
+    loop: true,
+    strings: ['Tribunal do Júri', 'Inquérito Policial', 'Habeas Corpus', 'Recursos', 'Lei de Drogas', 'Estatuto do Desarmamento', 'Crimes Tributários', 'Crimes Digitais', 'Crimes Ambientais'],
+    autoStart: true,
+  })
+</script>
