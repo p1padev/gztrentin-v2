@@ -1,15 +1,16 @@
 ---
 interface Props {
   title: string,
-  sectionClass?: string,
+  sectionClass?: string
   titleClass: string
   borderClass: string
+  containerClass?: string
 }
-const {title, sectionClass, titleClass, borderClass} = Astro.props as Props;
+const {title, sectionClass, titleClass, borderClass, containerClass } = Astro.props as Props;
 ---
 
 <section class:list={['py-8 px-4', sectionClass]}>
-  <div class='lg:container'>
+  <div class:list={['lg:container', containerClass]}>
     <div class:list={['w-fit border-b-2 border-solid py-4 pr-3 mb-4', borderClass]}>
       <h2 class:list={['text-xl font-semibold font-serif lg:text-3xl', titleClass]}>{title}</h2>
     </div>
