@@ -1,13 +1,10 @@
-import { TelephoneIcon } from '../TelephoneIcon';
+import { TelephoneIcon } from './Icons/TelephoneIcon';
 import StepCard from './StepCard';
-import type { Props } from './StepOne';
-import StepsNav from './StepsNav';
 
-export default function StepTwo(props: Props) {
+export default function StepTwo() {
   return (
     <StepCard>
-      <StepsNav {...props} id={2} />
-      <p className="text-center font-medium pt-3 text-sm md:py-4 md:text-base mb-auto">
+      <p className="text-center font-medium text-sm md:text-base">
         Com o seu contato posso agir imediatamente ou marcar uma reunião (sem
         custos). Você receberá orientações e um orçamento.
       </p>
@@ -16,12 +13,12 @@ export default function StepTwo(props: Props) {
           <div className="w-full">
             <div className="chat chat-end">
               <div className="chat-image avatar">
-                <div className="w-8 rounded-full">
+                <div className="w-6 md:w-8 rounded-full">
                   <img alt="Avatar de usuário" src="/images/AvatarIcon.svg" />
                 </div>
               </div>
               <div className="chat-header text-xs md:text-sm">Cliente</div>
-              <div className="chat-bubble chat-bubble-success text-sm font-medium min-h-[1.75rem] md:min-h-[2.75rem]">
+              <div className="chat-bubble chat-bubble-success text-xs md:text-sm font-medium min-h-[1.75rem] md:min-h-[2.75rem]">
                 <span className="inline-block w-[26px] relative top-1">
                   <TelephoneIcon />
                 </span>
@@ -30,14 +27,14 @@ export default function StepTwo(props: Props) {
             </div>
             <div className="chat chat-start">
               <div className="chat-image avatar">
-                <div className="w-9 md:w-10 rounded-full">
+                <div className="w-8 md:w-10 rounded-full">
                   <img alt="Avatar de Gustavo" src="/images/perfil-32.jpeg" />
                 </div>
               </div>
               <div className="chat-header text-xs md:text-sm">
                 Gustavo Trentin
               </div>
-              <div className="chat-bubble chat-bubble-success text-sm font-medium min-h-[1.75rem] md:min-h-[2.75rem]">
+              <div className="chat-bubble chat-bubble-success text-xs md:text-sm font-medium min-h-[1.75rem] md:min-h-[2.75rem]">
                 Estou a caminho da delegacia.
               </div>
             </div>
@@ -48,25 +45,25 @@ export default function StepTwo(props: Props) {
           <div className="w-full">
             <div className="chat chat-end">
               <div className="chat-image avatar">
-                <div className="w-8 rounded-full">
+                <div className="w-6 md:w-8 rounded-full">
                   <img alt="Avatar de usuário" src="/images/AvatarIcon.svg" />
                 </div>
               </div>
               <div className="chat-header text-xs md:text-sm">Cliente</div>
-              <div className="chat-bubble chat-bubble-success text-sm font-medium min-h-[1.75rem] md:min-h-[2.75rem]">
+              <div className="chat-bubble chat-bubble-success text-xs md:text-sm font-medium min-h-[1.75rem] md:min-h-[2.75rem]">
                 Olá Gustavo. Preciso de um advogado criminal...
               </div>
             </div>
             <div className="chat chat-start">
               <div className="chat-image avatar">
-                <div className="w-9 md:w-10 rounded-full">
+                <div className="w-8 md:w-10 rounded-full">
                   <img alt="Avatar de Gustavo" src="/images/perfil-32.jpeg" />
                 </div>
               </div>
               <div className="chat-header text-xs md:text-sm">
                 Gustavo Trentin
               </div>
-              <div className="chat-bubble chat-bubble-success text-sm font-medium ">
+              <div className="chat-bubble chat-bubble-success text-xs md:text-sm font-medium ">
                 Olá, tudo bem? Você poderia vir ao meu escritório amanhã?
               </div>
             </div>

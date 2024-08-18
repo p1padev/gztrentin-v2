@@ -1,11 +1,8 @@
 import StepCard from './StepCard';
-import type { Props } from './StepOne';
-import StepsNav from './StepsNav';
 
-export default function StepOne(props: Props) {
+export default function StepOne() {
   return (
     <StepCard>
-      <StepsNav {...props} id={3} />
       <div className="w-full flex-1 flex flex-col justify-center items-center">
         <p className="text-justify py-4 text-base md:text-xl font-regular">
           Após a aprovação do orçamento,{' '}

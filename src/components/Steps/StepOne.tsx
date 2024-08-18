@@ -1,17 +1,15 @@
-import { TelephoneIcon } from '../TelephoneIcon';
+import { TelephoneIcon } from './Icons/TelephoneIcon';
 import StepCard from './StepCard';
-import StepsNav from './StepsNav';
 
 export interface Props {
   onClickBack: () => void;
   onClickForward: () => void;
 }
 
-export default function StepOne(props: Props) {
+export default function StepOne() {
   return (
     <StepCard>
-      <StepsNav {...props} id={1} />
-      <p className="text-center font-medium pt-3 text-sm md:py-4 md:text-base mb-auto">
+      <p className="text-center font-medium text-sm md:text-base">
         Para entrar em contato comigo e falar do seu caso você pode:
       </p>
       <div className="flex w-full flex-col md:flex-row pt-4">
@@ -20,12 +18,12 @@ export default function StepOne(props: Props) {
           <div className="w-full">
             <div className="chat chat-end">
               <div className="chat-image avatar">
-                <div className="w-8 rounded-full">
+                <div className="w-6 md:w-8 rounded-full">
                   <img alt="Avatar de usuário" src="/images/AvatarIcon.svg" />
                 </div>
               </div>
               <div className="chat-header text-xs md:text-sm">Cliente</div>
-              <div className="chat-bubble chat-bubble-success text-sm font-medium min-h-[1.75rem] md:min-h-[2.75rem]">
+              <div className="chat-bubble chat-bubble-success text-xs md:text-sm font-medium min-h-[1.75rem] md:min-h-[2.75rem]">
                 <span className="inline-block w-[26px] relative top-0.5">
                   <TelephoneIcon />
                 </span>
@@ -33,7 +31,7 @@ export default function StepOne(props: Props) {
               </div>
             </div>
           </div>
-          <p className="text-center">
+          <p className="text-center text-base pt-2">
             Especialmente em caso de{' '}
             <span className="text-red-500 font-semibold">urgência</span>
           </p>
@@ -43,13 +41,13 @@ export default function StepOne(props: Props) {
           <h4 className="font-bold">Me mandar uma mensagem</h4>
           <div className="w-full">
             <div className="chat chat-end">
-              <div className="chat-image avatar w-7 md:w-8">
-                <div className="w-8 rounded-full">
+              <div className="chat-image avatar">
+                <div className="w-6 md:w-8 rounded-full">
                   <img alt="Avatar de usuário" src="/images/AvatarIcon.svg" />
                 </div>
               </div>
               <div className="chat-header text-xs md:text-sm">Cliente</div>
-              <div className="chat-bubble chat-bubble-success text-sm font-medium min-h-[1.75rem] md:min-h-[2.75rem]">
+              <div className="chat-bubble chat-bubble-success text-xs md:text-sm font-medium min-h-[1.75rem] md:min-h-[2.75rem]">
                 Olá Gustavo. Preciso de um advogado criminal...
               </div>
             </div>

@@ -3,7 +3,7 @@ import StepOne from './StepOne';
 import StepThree from './StepThree';
 import StepTwo from './StepTwo';
 
-interface StepObj {
+export interface StepObj {
   id: number;
   title: string;
   component: ({
@@ -15,7 +15,7 @@ interface StepObj {
 const steps: Array<StepObj> = [
   {
     id: 1,
-    title: 'Contato Inicial',
+    title: 'Contato',
     component: StepOne,
   },
   {
@@ -25,7 +25,7 @@ const steps: Array<StepObj> = [
   },
   {
     id: 3,
-    title: 'Encaminhar',
+    title: 'Defesa',
     component: StepThree,
   },
 ];
