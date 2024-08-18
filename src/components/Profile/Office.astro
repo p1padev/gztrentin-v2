@@ -1,20 +1,37 @@
 ---
-import Section from "../../layouts/Section.astro";
-import escritImg from '../../assets/temp-escritório.jpg'
-import { Picture } from "astro:assets";
+import Section from '../../layouts/Section.astro';
+import escritImg from '../../assets/temp-escritório.jpg';
+import { Picture } from 'astro:assets';
 ---
 
-<Section title="O escritório" sectionClass="bg-gradient-to-b from-red-800 to-red-900" titleClass="text-primary-content" borderClass="primary-content">
-  <div class="flex w-full flex-col items-center justify-center gap-4 md:flex-row md:gap-40">
-    <p class="text-white lg:text-2xl"><span class="font-semibold">Gustavo Trentin - Advocacia Criminal</span> é um escritório especializado em Direito e Processo Penal, com atuação completa em todas as fases do processo e do inquérito policial.</p>
+<Section
+  title="O escritório"
+  sectionClass="bg-gradient-to-b from-red-800 to-red-900"
+  titleClass="text-primary-content"
+  borderClass="primary-content"
+  id="escritorio"
+>
+  <div
+    class="flex w-full flex-col items-center justify-center gap-4 md:flex-row md:gap-40"
+  >
+    <p class="text-white lg:text-2xl">
+      <span class="font-semibold">Gustavo Trentin - Advocacia Criminal</span> é um
+      escritório especializado em Direito e Processo Penal, com atuação completa
+      em todas as fases do processo e do inquérito policial.
+    </p>
     <div class="flex-shrink-0 basis-1/2 lg:ml-auto">
-      <Picture src={escritImg} formats={['webp']} alt="Foto do escritório." pictureAttributes={{class: "escrit-image"}}/>
+      <Picture
+        src={escritImg}
+        formats={['webp']}
+        alt="Foto do escritório."
+        pictureAttributes={{ class: 'escrit-image' }}
+      />
     </div>
   </div>
 </Section>
 
 <style>
-  .escrit-image img{
+  .escrit-image img {
     object-fit: cover;
   }
 </style>

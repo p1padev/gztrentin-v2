@@ -53,7 +53,7 @@ import ArrowIcon from './ArrowIcon.astro';
             role="menuitem"
             aria-haspopup="false"
             class="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-gray-500 focus:text-gray-600 focus:outline-none focus-visible:outline-none lg:px-8"
-            href="/"><span>Página 1</span></a
+            href="#escritorio"><span>O escritório</span></a
           >
         </li>
         <li role="none" class="flex items-stretch">
@@ -61,23 +61,63 @@ import ArrowIcon from './ArrowIcon.astro';
             role="menuitem"
             aria-haspopup="false"
             class="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-gray-500 focus:text-gray-600 focus:outline-none focus-visible:outline-none lg:px-8"
-            href="/"
+            href="#atuação"
           >
-            <span>Página 2</span></a
+            <span>Áreas de atuação</span></a
           >
         </li>
+        <li role="none" class="flex items-stretch">
+          <a
+            role="menuitem"
+            aria-haspopup="false"
+            class="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-gray-500 focus:text-gray-600 focus:outline-none focus-visible:outline-none lg:px-8"
+            href="#como-funciona"
+          >
+            <span>Como funciona</span></a
+          >
+        </li>
+        <li class="items-center">
+          <a href="#contato" class="btn btn-primary">
+            <span>Entre em contato</span>
+            <ArrowIcon />
+          </a>
+        </li>
       </ul>
-      <div class="hidden items-center lg:flex">
-        <button class="btn btn-primary">
-          <span>Entre em contato</span>
-          <ArrowIcon />
-        </button>
-      </div>
     </nav>
   </div>
 </div>
 
 <script>
+  type state = boolean;
+  type callback = (state: state) => void;
+
+  class MenuState {
+    menuIsOpen: boolean;
+    subs: Array<callback>;
+
+    constructor() {
+      this.menuIsOpen = false;
+      this.subs = [];
+    }
+
+    notifySubs() {
+      this.subs.forEach((callback) => callback(this.menuIsOpen));
+    }
+
+    subscribe(callback: callback) {
+      this.subs.push(callback);
+    }
+
+    isOpen() {
+      return this.menuIsOpen;
+    }
+
+    changeState() {
+      this.menuIsOpen = !this.menuIsOpen;
+      this.notifySubs();
+    }
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     const mobileBtn = document.querySelector(
       '.mobile-btn'
@@ -85,21 +125,32 @@ import ArrowIcon from './ArrowIcon.astro';
     const mobileMenu = document.querySelector(
       '.mobile-menu'
     ) as HTMLUListElement;
+    const mobileLinks = document.querySelectorAll('.mobile-menu a');
 
-    let isOpen = false;
+    const state = new MenuState();
+
+    mobileLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        if (state.isOpen()) {
+          state.changeState();
+        }
+      });
+    });
 
     mobileBtn.addEventListener('click', function () {
-      isOpen = !isOpen;
+      state.changeState();
+    });
 
-      mobileBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    function updateNav(menuIsOpen: state) {
+      mobileBtn.setAttribute('aria-expanded', menuIsOpen ? 'true' : 'false');
 
-      mobileMenu.classList.toggle('visible', isOpen);
-      mobileMenu.classList.toggle('opacity-100', isOpen);
-      mobileMenu.classList.toggle('backdrop-blur-sm', isOpen);
-      mobileMenu.classList.toggle('invisible', !isOpen);
-      mobileMenu.classList.toggle('opacity-0', !isOpen);
+      mobileMenu.classList.toggle('visible', menuIsOpen);
+      mobileMenu.classList.toggle('opacity-100', menuIsOpen);
+      mobileMenu.classList.toggle('backdrop-blur-sm', menuIsOpen);
+      mobileMenu.classList.toggle('invisible', !menuIsOpen);
+      mobileMenu.classList.toggle('opacity-0', !menuIsOpen);
 
-      if (isOpen) {
+      if (menuIsOpen) {
         mobileBtn.classList.add(
           'visible',
           'opacity-100',
@@ -120,6 +171,8 @@ import ArrowIcon from './ArrowIcon.astro';
           '[&_span:nth-child(3)]:w-0'
         );
       }
-    });
+    }
+
+    state.subscribe(updateNav);
   });
 </script>

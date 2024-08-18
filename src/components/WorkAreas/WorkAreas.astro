@@ -2,23 +2,29 @@
 import WorkAreaItem from '../WorkAreas/WorkAreaItem.astro';
 ---
 
-<section class="bg-neutral-100">
+<section class="bg-neutral-100" id="atuação">
   <div class="container">
     <div class="py-6 flex flex-col justify-center items-center px-4">
-      <div class="bg-neutral-50 border-2 border-solid border-neutral-200 border-b-0 p-4 rounded-t-lg shadow-lg">
-        <h2 class="text-center text text-xl font-semibold lg:text-2xl">Áreas de atuação</h2>
+      <div
+        class="bg-neutral-50 border-2 border-solid border-neutral-200 border-b-0 p-4 rounded-t-lg shadow-lg"
+      >
+        <h2 class="text-center text text-xl font-semibold lg:text-2xl">
+          Áreas de atuação
+        </h2>
       </div>
-      <div class='shadow-md bg-justice'>
-        <ul class="bg-neutral-50/95 backdrop-blur-[6px] sm:backdrop-blur-sm p-8 md:px-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 z-10 relative rounded-md">
-          <WorkAreaItem title='Tribunal do Júri'/>
-          <WorkAreaItem title='Inquérito Policial'/>
-          <WorkAreaItem title='Habeas Corpus'/>
-          <WorkAreaItem title='Recursos'/>
-          <WorkAreaItem title='Lei de Drogas'/>
-          <WorkAreaItem title='Estatuto do Desarmamento'/>
-          <WorkAreaItem title='Crimes Tributários'/>
-          <WorkAreaItem title='Crimes Digitais'/>
-          <WorkAreaItem title='Crimes Ambientais'/>
+      <div class="shadow-md bg-justice">
+        <ul
+          class="bg-neutral-50/95 backdrop-blur-[6px] sm:backdrop-blur-sm p-8 md:px-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 z-10 relative rounded-md"
+        >
+          <WorkAreaItem title="Tribunal do Júri" />
+          <WorkAreaItem title="Inquérito Policial" />
+          <WorkAreaItem title="Habeas Corpus" />
+          <WorkAreaItem title="Recursos" />
+          <WorkAreaItem title="Lei de Drogas" />
+          <WorkAreaItem title="Estatuto do Desarmamento" />
+          <WorkAreaItem title="Crimes Tributários" />
+          <WorkAreaItem title="Crimes Digitais" />
+          <WorkAreaItem title="Crimes Ambientais" />
         </ul>
       </div>
     </div>
