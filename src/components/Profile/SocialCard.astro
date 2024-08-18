@@ -1,26 +1,31 @@
 ---
-import { Image } from "astro:assets";
+import { Image } from 'astro:assets';
 
 interface Props {
-  image: ImageMetadata,
-  alt: string,
-  title: string,
-  href: string
+  image: ImageMetadata;
+  alt: string;
+  title: string;
+  href: string;
 }
 
-const { image, alt, title, href } = Astro.props as Props;
+const { image, alt, title, href } = Astro.props;
 ---
 
 <article class="card bg-base-100 max-w-96 shadow-xl">
   <Image
-  src={image}
-  alt={alt}
-  width={900}
-  height={144}
-  class='max-h-36 object-cover object-[center_35%] grayscale'
+    src={image}
+    alt={alt}
+    width={900}
+    height={144}
+    class="max-h-36 object-cover object-[center_35%] grayscale"
   />
   <div class="card-body p-4">
     <h3 class="card-title">{title}</h3>
-    <a href={href} target="_blank" class="link link-hover underline-offset-4 text-sm md:text-base mt-auto">Leia mais</a>
+    <a
+      href={href}
+      target="_blank"
+      class="link link-hover underline-offset-4 text-sm md:text-base mt-auto"
+      >Leia mais</a
+    >
   </div>
 </article>

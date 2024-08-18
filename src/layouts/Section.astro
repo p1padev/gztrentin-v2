@@ -8,7 +8,7 @@ interface Props {
   id: string;
 }
 const { title, sectionClass, titleClass, borderClass, containerClass, id } =
-  Astro.props as Props;
+  Astro.props;
 ---
 
 <section class:list={['py-8 px-4', sectionClass]} id={id}>
