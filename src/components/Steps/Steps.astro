@@ -1,11 +1,9 @@
 ---
-import Section from "../../layouts/Section.astro";
-import StepsAnimation from "./StepsAnimation.astro";
-import StepsLayout from "./StepsLayout.astro";
+import StepsAnimation from './StepsAnimation.tsx';
 ---
 
-<Section title="Como funciona" sectionClass="bg-base-200 cards-section" titleClass="text-primary" borderClass="border-primary" containerClass="flex flex-col">
-  <StepsLayout>
-    <StepsAnimation />
-  </StepsLayout>
-</Section>
+<div
+  class="flex flex-col items-center bg-gradient-to-b from-neutral-100 to-neutral-200"
+>
+  <StepsAnimation client:visible={{ rootMargin: '200px' }} />
+</div>
