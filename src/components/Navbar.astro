@@ -44,39 +44,36 @@ import ArrowIcon from './ArrowIcon.astro';
         </div>
       </button>
       <ul
-        role="menubar"
+        role="menu"
         aria-label="Selecionar página"
-        class="mobile-menu invisible absolute top-0 left-0 z-[-1] ml-auto h-screen w-full justify-center overflow-hidden overflow-y-auto overscroll-contain bg-white/95 px-8 pb-12 pt-28 font-bold opacity-0 transition-[opacity,visibility] duration-300 lg:visible lg:relative lg:top-0 lg:z-0 lg:flex lg:h-full lg:w-auto lg:items-stretch lg:overflow-visible lg:bg-white/0 lg:px-0 lg:py-0 lg:pt-0 lg:opacity-100"
+        class="mobile-menu invisible absolute top-0 left-0 z-[-1] ml-auto h-screen w-full justify-center overflow-hidden overflow-y-auto overscroll-contain bg-white/95 px-8 pb-12 pt-28 font-bold opacity-0 transition-[opacity,visibility] duration-300 lg:visible lg:relative lg:top-0 lg:z-0 lg:flex lg:h-full lg:w-auto lg:items-center lg:overflow-visible lg:bg-white/0 lg:px-0 lg:py-0 lg:pt-0 lg:opacity-100"
       >
-        <li role="none" class="flex items-stretch">
+        <li role="menuitem" class="flex items-stretch">
           <a
-            role="menuitem"
             aria-haspopup="false"
-            class="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-gray-500 focus:text-gray-600 focus:outline-none focus-visible:outline-none lg:px-8"
+            class="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-gray-500 focus:text-gray-600 lg:px-8"
             href="#escritorio"><span>O escritório</span></a
           >
         </li>
-        <li role="none" class="flex items-stretch">
+        <li role="menuitem" class="flex items-stretch">
           <a
-            role="menuitem"
             aria-haspopup="false"
-            class="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-gray-500 focus:text-gray-600 focus:outline-none focus-visible:outline-none lg:px-8"
+            class="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-gray-500 focus:text-gray-600 lg:px-8"
             href="#atuação"
           >
             <span>Áreas de atuação</span></a
           >
         </li>
-        <li role="none" class="flex items-stretch">
+        <li role="menuitem" class="flex items-stretch">
           <a
-            role="menuitem"
             aria-haspopup="false"
-            class="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-gray-500 focus:text-gray-600 focus:outline-none focus-visible:outline-none lg:px-8"
+            class="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-gray-500 focus:text-gray-600 lg:px-8"
             href="#como-funciona"
           >
             <span>Como funciona</span></a
           >
         </li>
-        <li class="items-center">
+        <li role="menuitem" class="items-center">
           <a href="#contato" class="btn btn-primary">
             <span>Entre em contato</span>
             <ArrowIcon />
