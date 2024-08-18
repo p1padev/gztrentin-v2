@@ -1,12 +1,13 @@
 import { ArrowLeft } from './Icons/ArrowLeft';
 import { ArrowRight } from './Icons/ArrowRight';
-import type { Props } from './StepOne';
 import type { StepObj } from './Steps';
 
-interface NavProps extends Props {
+interface NavProps {
   steps: StepObj[];
   setSelectedTabID: React.Dispatch<React.SetStateAction<number>>;
   selectedTabID: number;
+  onClickBack: () => void;
+  onClickForward: () => void;
 }
 
 export default function StepNav({
@@ -26,6 +27,7 @@ export default function StepNav({
         onClick={onClickBack}
       >
         <ArrowLeft />
+        <span className="sr-only">Passar para a tela anterior</span>
       </button>
       <ol className="bg-primary-content w-fit rounded-md py-3 p-1 md:p-3 shadow-md steps gap-x-3">
         {steps.map((step) => (
@@ -60,6 +62,7 @@ export default function StepNav({
         onClick={onClickForward}
       >
         <ArrowRight />
+        <span className="sr-only">Passar para a próxima tela</span>
       </button>
     </div>
   );
