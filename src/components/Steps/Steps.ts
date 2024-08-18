@@ -1,4 +1,3 @@
-import type { Props as ComponentProps } from './StepOne';
 import StepOne from './StepOne';
 import StepThree from './StepThree';
 import StepTwo from './StepTwo';
@@ -6,10 +5,7 @@ import StepTwo from './StepTwo';
 export interface StepObj {
   id: number;
   title: string;
-  component: ({
-    onClickBack,
-    onClickForward,
-  }: ComponentProps) => React.JSX.Element;
+  component: () => React.JSX.Element;
 }
 
 const steps: Array<StepObj> = [

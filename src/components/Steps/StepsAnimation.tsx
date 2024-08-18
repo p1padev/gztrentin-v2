@@ -2,7 +2,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from 'react';
 import StepOne from './StepOne';
 import steps from './Steps';
-import StepNav from './StepsNav-2';
+import StepNav from './StepsNav';
 
 export default function StepsAnimation() {
   const [selectedTabID, setSelectedTabID] = useState<number>(1);
@@ -50,10 +50,7 @@ export default function StepsAnimation() {
               transition={{ duration: 0.2 }}
               className="flex-1 flex flex-col h-full w-full"
             >
-              <SelectedComponent
-                onClickBack={onClickBack}
-                onClickForward={onClickForward}
-              />
+              <SelectedComponent />
             </motion.div>
           </AnimatePresence>
         </div>

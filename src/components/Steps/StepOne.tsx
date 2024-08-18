@@ -1,17 +1,12 @@
 import { TelephoneIcon } from './Icons/TelephoneIcon';
 import StepCard from './StepCard';
 
-export interface Props {
-  onClickBack: () => void;
-  onClickForward: () => void;
-}
-
 export default function StepOne() {
   return (
     <StepCard>
-      <p className="text-center font-medium text-sm md:text-base">
+      <h3 className="text-center font-medium text-sm md:text-base">
         Para entrar em contato comigo e falar do seu caso você pode:
-      </p>
+      </h3>
       <div className="flex w-full flex-col md:flex-row pt-4">
         <div className="basis-1/2 card bg-base-200 rounded-box flex flex-col flex-grow items-center justify-center gap-2 p-2 md:gap-4 md:p-4">
           <h4 className="font-bold">Me ligar</h4>
@@ -19,7 +14,11 @@ export default function StepOne() {
             <div className="chat chat-end">
               <div className="chat-image avatar">
                 <div className="w-6 md:w-8 rounded-full">
-                  <img alt="Avatar de usuário" src="/images/AvatarIcon.svg" />
+                  <img
+                    alt="Avatar de usuário"
+                    src="/images/AvatarIcon.svg"
+                    loading="lazy"
+                  />
                 </div>
               </div>
               <div className="chat-header text-xs md:text-sm">Cliente</div>
@@ -33,7 +32,7 @@ export default function StepOne() {
           </div>
           <p className="text-center text-base pt-2">
             Especialmente em caso de{' '}
-            <span className="text-red-500 font-semibold">urgência</span>
+            <span className="font-semibold">urgência</span>
           </p>
         </div>
         <div className="divider md:divider-horizontal font-bold">ou</div>
@@ -43,7 +42,11 @@ export default function StepOne() {
             <div className="chat chat-end">
               <div className="chat-image avatar">
                 <div className="w-6 md:w-8 rounded-full">
-                  <img alt="Avatar de usuário" src="/images/AvatarIcon.svg" />
+                  <img
+                    alt="Avatar de usuário"
+                    src="/images/AvatarIcon.svg"
+                    loading="lazy"
+                  />
                 </div>
               </div>
               <div className="chat-header text-xs md:text-sm">Cliente</div>

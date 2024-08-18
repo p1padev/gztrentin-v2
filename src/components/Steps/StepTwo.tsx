@@ -14,7 +14,11 @@ export default function StepTwo() {
             <div className="chat chat-end">
               <div className="chat-image avatar">
                 <div className="w-6 md:w-8 rounded-full">
-                  <img alt="Avatar de usuário" src="/images/AvatarIcon.svg" />
+                  <img
+                    alt="Avatar de usuário"
+                    src="/images/AvatarIcon.svg"
+                    loading="lazy"
+                  />
                 </div>
               </div>
               <div className="chat-header text-xs md:text-sm">Cliente</div>
@@ -28,7 +32,11 @@ export default function StepTwo() {
             <div className="chat chat-start">
               <div className="chat-image avatar">
                 <div className="w-8 md:w-10 rounded-full">
-                  <img alt="Avatar de Gustavo" src="/images/perfil-32.jpeg" />
+                  <img
+                    alt="Avatar de Gustavo"
+                    src="/images/perfil-32.jpeg"
+                    loading="lazy"
+                  />
                 </div>
               </div>
               <div className="chat-header text-xs md:text-sm">
@@ -46,7 +54,11 @@ export default function StepTwo() {
             <div className="chat chat-end">
               <div className="chat-image avatar">
                 <div className="w-6 md:w-8 rounded-full">
-                  <img alt="Avatar de usuário" src="/images/AvatarIcon.svg" />
+                  <img
+                    alt="Avatar de usuário"
+                    src="/images/AvatarIcon.svg"
+                    loading="lazy"
+                  />
                 </div>
               </div>
               <div className="chat-header text-xs md:text-sm">Cliente</div>
@@ -57,7 +69,11 @@ export default function StepTwo() {
             <div className="chat chat-start">
               <div className="chat-image avatar">
                 <div className="w-8 md:w-10 rounded-full">
-                  <img alt="Avatar de Gustavo" src="/images/perfil-32.jpeg" />
+                  <img
+                    alt="Avatar de Gustavo"
+                    src="/images/perfil-32.jpeg"
+                    loading="lazy"
+                  />
                 </div>
               </div>
               <div className="chat-header text-xs md:text-sm">
