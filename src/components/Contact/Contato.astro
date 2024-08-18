@@ -1,0 +1,44 @@
+---
+import Section from '../../layouts/Section.astro';
+import { TelephoneIcon } from '../TelephoneIcon';
+import { WhatsappIcon } from '../WhatsappIcon';
+---
+
+<Section
+  title="Contato e localização"
+  sectionClass="bg-base-200"
+  borderClass="border-primary"
+  titleClass="text-primary"
+>
+  <div
+    class="py-6 flex flex-col md:flex-row justify-center items-center gap-10"
+  >
+    <div class="flex-1 px-2">
+      <div
+        class="bg-gradient-to-tr from-neutral-200 to-base-300 rounded-md w-fit px-10 py-4 flex flex-col justify-center items-center gap-4 shadow-sm mx-auto"
+      >
+        <p class="font-semibold text-lg">Número de celular</p>
+        <p class="text-xs">Clique para ligar ou Whatsapp</p>
+        <a href="tel:+5554999869982" class="btn btn-primary text-lg"
+          ><TelephoneIcon />(54) 99986-9982</a
+        >
+        <a href="https://wa.me/5554999869982" class="btn btn-success text-lg"
+          ><WhatsappIcon />(54) 99986-9982</a
+        >
+      </div>
+    </div>
+    <div class="flex-1 px-4 w-screen md:w-full">
+      <div class="border-2 border-solid border-base-300 shadow-sm">
+        <iframe
+          title="Localização no Google Maps"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5264.3505323182335!2d-52.40919452589073!3d-28.263897671458263!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e2bffb9c8a43a5%3A0x5ec9d0d816ff9cb1!2sGustavo%20Z.%20Trentin%20Advocacia%20Criminal!5e0!3m2!1spt-BR!2sbr!4v1723946474164!5m2!1spt-BR!2sbr"
+          width="100%"
+          height="350"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</Section>
