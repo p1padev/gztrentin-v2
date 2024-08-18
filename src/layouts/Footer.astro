@@ -6,23 +6,23 @@ const year = new Date().getFullYear().toString();
 ---
 
 <footer
-  class="bg-primary text-primary-content flex flex-col md:flex-row justify-center items-center py-6"
+  class="bg-accent text-primary-content flex flex-col md:flex-row py-6 justify-center items-center"
 >
   <div class="flex-1 flex flex-col justify-center items-center">
     <Image src={Logo} alt="" class="w-[90px]" />
-    <p class="text-center font-bold text-sm font-serif">
-      © {year} Gustavo Zanette Trentin
-      <span class="block">Todos os direitos reservados</span>
+    <p class="text-center font-semibold text-sm font-serif">
+      © {year} Gustavo Zanette Trentin <br />
+      Registro OAB/RS 123.926
     </p>
   </div>
-  <div class="flex-1">
-    <address class="font-normal text-center font-serif not-italic py-4">
-      <span class="block py-4"
-        >Telefone: <a href="tel:+555499986-9982">(54) 99986-9982</a></span
-      >
-      R. General Osório, 937, Sala 204, Centro <br />
+  <div class="flex-1 px-4">
+    <address class="text-xs md:text-sm text-center font-serif not-italic py-4">
+      Endereço:<br /> R. General Osório, 937, Sala 204, Centro <br />
       Passo Fundo - RS <br />
       CEP: 99010-140
+      <span class="block py-2"
+        >Telefone: <br /><a href="tel:+555499986-9982">(54) 99986-9982</a></span
+      >
     </address>
   </div>
 </footer>
