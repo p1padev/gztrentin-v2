@@ -2,6 +2,9 @@
 import Section from '../../layouts/Section.astro';
 import { TelephoneIcon } from '../Steps/Icons/TelephoneIcon';
 import { WhatsappIcon } from '../Steps/Icons/WhatsappIcon';
+import Card from './Card.astro';
+import GmailIcon from './GmailIcon.astro';
+import InstagramIcon from './InstagramIcon.astro';
 ---
 
 <div class="flex flex-col">
@@ -12,20 +15,39 @@ import { WhatsappIcon } from '../Steps/Icons/WhatsappIcon';
     titleClass="text-primary"
     id="contato"
   >
-    <div class="py-6 flex flex-col justify-center items-center">
-      <div
-        class="bg-gradient-to-tr from-neutral-200 to-base-300 rounded-md px-10 py-4 flex flex-col justify-center items-center gap-4 shadow-md"
-      >
-        <h3 class="font-semibold text-lg">Celular</h3>
-        <a href="tel:+5554999869982" class="btn btn-primary text-lg"
+    <div class="py-6 flex flex-wrap gap-6 justify-center">
+      <Card title="Celular">
+        <a href="tel:+5554999869982" class="btn btn-accent text-lg"
           ><TelephoneIcon />(54) 99986-9982</a
         >
+      </Card>
+      <Card title="Whatsapp">
         <a href="https://wa.me/5554999869982" class="btn btn-success text-lg"
           ><WhatsappIcon />(54) 99986-9982</a
         >
-        <p>Em caso de urgência, favor ligar.</p>
-      </div>
+      </Card>
+      <Card title="Email">
+        <a
+          href="mailto:gztrentin@gmail.com"
+          class="btn btn-outline border-red-500 bg-white hover:bg-neutral-50 hover:text-primary text-lg my-auto"
+          ><div class="text-red-500">
+            <GmailIcon />
+          </div>gztrentin@gmail.com</a
+        >
+      </Card>
+      <Card title="Instagram">
+        <div class="flex-1 h-full">
+          <a
+            href="https://instagram.com/gztrentin"
+            class="btn btn-outline border-orange-500 bg-white hover:bg-neutral-50 hover:text-primary text-lg my-auto"
+            ><div class="text-orange-500">
+              <InstagramIcon />
+            </div>@gztrentin</a
+          >
+        </div>
+      </Card>
     </div>
+    <p class="text-sm font-bold w-fit">Em caso de urgência, favor ligar.</p>
   </Section>
   <Section
     title="Escritório"

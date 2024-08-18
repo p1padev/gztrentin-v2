@@ -1,5 +1,9 @@
 import daisyui from 'daisyui';
+import themes from 'daisyui/src/theming/themes';
 import defaultTheme from 'tailwindcss/defaultTheme';
+
+const { lofi } = themes;
+const customLofi = lofi;
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -17,6 +21,13 @@ export default {
   },
   plugins: [daisyui],
   daisyui: {
-    themes: ['lofi'],
+    themes: [
+      {
+        lofi: {
+          ...customLofi,
+          success: '#86efac',
+        },
+      },
+    ],
   },
 };
