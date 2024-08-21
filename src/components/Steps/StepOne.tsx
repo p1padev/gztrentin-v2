@@ -9,7 +9,7 @@ export default function StepOne() {
       </h3>
       <div className="flex w-full flex-col md:flex-row pt-4">
         <div className="basis-1/2 card bg-base-200 rounded-box flex flex-col flex-grow items-center justify-center gap-2 p-2 md:gap-4 md:p-4">
-          <h4 className="font-bold">Me ligar</h4>
+          <h4 className="font-bold">Ligar</h4>
           <div className="w-full">
             <div className="chat chat-end">
               <div className="chat-image avatar">
@@ -37,7 +37,7 @@ export default function StepOne() {
         </div>
         <div className="divider md:divider-horizontal font-bold">ou</div>
         <div className="basis-1/2 card bg-base-200 rounded-box flex flex-col flex-grow items-center justify-start gap-2 p-2 md:gap-4 md:p-4">
-          <h4 className="font-bold">Me mandar uma mensagem</h4>
+          <h4 className="font-bold">Mandar uma mensagem</h4>
           <div className="w-full">
             <div className="chat chat-end">
               <div className="chat-image avatar">
