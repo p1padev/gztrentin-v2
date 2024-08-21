@@ -37,7 +37,7 @@ export default function StepsAnimation() {
           onClickForward={onClickForward}
         />
         <div className="flex flex-col bg-white p-4 md:py-4 md:px-8 w-full flex-1 max-w-[900px] min-h-[450px] md:min-h-[340px]">
-          <AnimatePresence mode="wait">
+          <AnimatePresence mode="wait" initial={false}>
             <motion.div
               key={
                 selectedTabID
@@ -49,6 +49,7 @@ export default function StepsAnimation() {
               exit={{ y: -10, opacity: 0 }}
               transition={{ duration: 0.2 }}
               className="flex-1 flex flex-col h-full w-full"
+              aria-live="polite"
             >
               <SelectedComponent />
             </motion.div>
