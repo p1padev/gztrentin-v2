@@ -1,26 +1,36 @@
 ---
-import perfilImg from '../../assets/perfil.webp';
+import perfilImg from '../../assets/perfil-original.jpeg';
 import { Image } from 'astro:assets';
 import Office from './Office.astro';
+import Section from '../../layouts/Section.astro';
 ---
 
-<Office />
-<div
-  class="bg-gradient-to-b from-red-900 to-red-950 text-white py-8 shadow-inner"
+<Section
+  title="O advogado"
+  id="o-advogado"
+  sectionClass="bg-neutral-900 text-white"
+  titleClass="text-white"
+  borderClass="text-white"
 >
-  <div class="py-4 md:py-6">
-    <div class="w-fit mx-auto">
-      <Image
-        src={perfilImg}
-        alt="Foto de Gustavo em sessão de júri. Ele é loiro, branco, usa um terno preto e uma toga preta por cima."
-        class="perfil-image max-w-80 max-h-52 object-cover object-[center_55%] lg:max-w-lg border-solid border-2 border-base-300"
-      />
-    </div>
+  <div class="py-4 md:py-6 flex flex-wrap items-center justify-around gap-6">
     <p
-      class="font-serif font-semibold text-center bg-base-100 text-primary py-4 px-4 shadow-lg"
+      class="font-serif font-semibold text-justify text-primary-content mx-0 flex-auto flex-shrink basis-1/2"
     >
       Gustavo Zanette Trentin é Advogado Criminalista, pós-graduado em Direito
-      Penal e Criminologia pela PUC/RS.<br />Registro OAB/RS 123.926
+      Penal e Criminologia pela PUC/RS. Registro OAB/RS 123.926<br /><br />
+      Conduz casos em todas as fases do processo e do inquérito policial com <span
+        class="bg-white text-primary p-1"
+      >
+        experiência de mais de X clientes atendidos e X absolvições.
+      </span>
+      <br /><br />
     </p>
+    <Image
+      src={perfilImg}
+      alt="Foto de Gustavo em sessão de júri. Ele é loiro, branco, usa um terno preto e uma toga preta por cima."
+      width={500}
+      height={350}
+      class="flex-auto flex-shrink-0 w-full max-w-md lg:max-w-md max-h-60 lg:max-h-72 object-cover object-[center_60%] border-solid border-2 border-neutral-200"
+    />
   </div>
-</div>
+</Section>
