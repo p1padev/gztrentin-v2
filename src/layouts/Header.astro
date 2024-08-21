@@ -7,7 +7,7 @@ import Typewriter from '../components/Typewriter.astro';
 <header class="flex flex-col">
   <Navbar />
   <div
-    class="pt-[200px] md:pt-[250px] pb-[100px] md:pb-[200px] px-1 flex flex-col justify-center gap-20"
+    class="pt-[200px] md:pt-[250px] pb-[100px] md:pb-[200px] px-1 flex flex-col justify-center gap-14"
   >
     <h1
       class="text-center text-primary text-[1.6rem] leading-normal font-serif font-bold sm:text-4xl/normal md:text-5xl/normal mx-auto max-w-[24ch]"
@@ -18,7 +18,9 @@ import Typewriter from '../components/Typewriter.astro';
     <div class="mx-auto p-1 bg-base-200 min-w-48 text-center opacity-50 -z-10">
       <Typewriter />
     </div>
-    <a class="btn btn-primary mt-6 w-fit mx-auto" href="#contato"
+    <a
+      class="btn btn-primary w-fit mx-auto lg:text-lg rounded-md"
+      href="#contato"
       >Entre em contato <ArrowIcon />
     </a>
   </div>
